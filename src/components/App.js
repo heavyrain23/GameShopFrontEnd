@@ -4,12 +4,12 @@ import Game from "./elements/Game";
 import Cart from "./elements/Cart";
 import GamesContext from "./elements/GamesContext";
 import { Route } from "react-router-dom";
-import axios from "axios";
 import ListGames from "./elements/ListGames";
 import Header from "./elements/Header";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import Footer from "./elements/Footer";
 import Loader from "./elements/Loader";
+import API from "./../../utils/API";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -39,8 +39,7 @@ const App = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios
-      .get("/products")
+    API.get("/products")
       .then((response) => {
         setProducts(response.data);
         setLoading(false);

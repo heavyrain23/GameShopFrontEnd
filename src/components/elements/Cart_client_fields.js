@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import axios from "axios";
+import API from "../../../utils/API";
 import GamesContext from "./GamesContext";
 import Notification from "./Notification";
 
@@ -37,7 +37,7 @@ const CartClientFields = () => {
       sendNotification("YOUR CART IS EMPTY :C");
     } else {
       sendNotification("YOUR ORDER IS ACCEPTED C:");
-      await axios.post("/customers", newCustoumer);
+      await API.post("/customers", newCustoumer);
     }
   }
 

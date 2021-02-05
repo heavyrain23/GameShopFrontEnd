@@ -37,7 +37,7 @@ const CartClientFields = () => {
       sendNotification("YOUR CART IS EMPTY :C");
     } else {
       sendNotification("YOUR ORDER IS ACCEPTED C:");
-      let res = await axios.post("/customers", newCustoumer);
+      await axios.post("/customers", newCustoumer);
     }
   }
 

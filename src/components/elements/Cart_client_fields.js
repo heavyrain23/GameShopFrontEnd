@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import API from "../../../utils/API";
+import API from "../../utils/API";
 import GamesContext from "./GamesContext";
 import Notification from "./Notification";
 

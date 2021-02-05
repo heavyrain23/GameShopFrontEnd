@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": {
-    "/*": {
+    "/": {
       "target": "https://game-store-2077.herokuapp.com/"
     }
   },

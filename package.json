@@ -4,7 +4,7 @@
   "private": true,
   "proxy": {
     "/": {
-      "target": "/cors-proxy/https://game-store-2077.herokuapp.com/"
+      "target": "https://game-store-2077.herokuapp.com/"
     }
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
     "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
     "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

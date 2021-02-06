@@ -2,11 +2,10 @@ import React, { useContext } from "react";
 import { useParams } from "react-router";
 import { StyledGame, StyledGameTitle } from "./../styles/StyledGame";
 import GamesContext from "./GamesContext";
-import Loader from "./Loader";
 
 const Game = () => {
   const { id } = useParams();
-  const { products, cart, updateCart, loading, setLoading } = useContext(GamesContext);
+  const { products, cart, updateCart, setLoading } = useContext(GamesContext);
   const product = products && products[id - 1];
 
   const addGame = () => {
@@ -27,7 +26,6 @@ const Game = () => {
 
   return (
     <>
-      {loading && <Loader />}
       {product && (
         <div>
           <StyledGameTitle>{product.title}</StyledGameTitle>

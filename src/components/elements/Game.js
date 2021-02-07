@@ -5,9 +5,9 @@ import GamesContext from "./GamesContext";
 
 const Game = () => {
   const { id } = useParams();
-  const { products, cart, updateCart, setLoading } = useContext(GamesContext);
+  const { products, cart, updateCart } = useContext(GamesContext);
   console.log({ products });
-  const product = products && products[id - 1];
+  const product = products && products.find((x) => (x.id = id));
 
   const addGame = () => {
     // checking for existing obj in array
@@ -22,8 +22,6 @@ const Game = () => {
       updateCart({ type: "add", item: product });
     }
   };
-
-  !product && setLoading(true);
 
   return (
     <>

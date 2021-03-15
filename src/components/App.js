@@ -10,6 +10,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import Footer from "./elements/Footer";
 import Loader from "./elements/Loader";
 import API from "./../utils/API";
+import Login from "./login/Login";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -36,6 +37,7 @@ const App = () => {
   const [cart, updateCart] = useReducer(reducer, []);
   const [filter, setFilter] = useState("");
   const [loading, setLoading] = useState(false);
+  const [token, setToken] = useState();
 
   useEffect(() => {
     setLoading(true);
@@ -48,6 +50,10 @@ const App = () => {
         console.log(err);
       });
   }, []);
+
+  if (token) {
+    return <Login setToken={setToken} />;
+  }
 
   return (
     <>

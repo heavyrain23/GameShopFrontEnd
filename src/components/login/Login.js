@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import API from "../../utils/API";
 
 async function loginUser(credentials) {
   return fetch("http://localhost:5000/login", {
@@ -35,7 +34,7 @@ const Login = ({ setToken }) => {
         </label>
         <label>
           <p>Password</p>
-          <input type="password" onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" autoComplete="on" onChange={(e) => setPassword(e.target.value)} />
         </label>
         <div>
           <button type="submit">Submit</button>

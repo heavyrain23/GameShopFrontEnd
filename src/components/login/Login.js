@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useContext } from "react";
+import GamesContext from "./../elements/GamesContext";
 
 async function loginUser(credentials) {
   return fetch("http://localhost:5000/login", {
@@ -14,6 +14,7 @@ async function loginUser(credentials) {
 const Login = ({ setToken }) => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const { setLoggedIn } = useContext(GamesContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ const Login = ({ setToken }) => {
       password,
     });
     setToken(token);
+    setLoggedIn(true);
   };
 
   return (
@@ -42,10 +44,6 @@ const Login = ({ setToken }) => {
       </form>
     </div>
   );
-};
-
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
 };
 
 export default Login;

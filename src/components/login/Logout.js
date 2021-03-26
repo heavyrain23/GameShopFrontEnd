@@ -9,6 +9,7 @@ const Logout = () => {
   async function handleLogout() {
     setLoggedIn(false);
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     history.push("/login");
   }
 

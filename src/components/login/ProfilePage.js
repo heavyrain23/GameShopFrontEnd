@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import GamesContext from "../elements/GamesContext";
 
 const ProfilePage = () => {
+  let { user } = useContext(GamesContext);
+
+  console.log(user);
+
   return (
-    <div>
-      <h1>Profile Page</h1>
-      <p>User info</p>
-    </div>
+    <>
+      {user && (
+        <div>
+          <h1>Profile Page</h1>
+          User name: {user.first_name}
+          <p>User info</p>
+        </div>
+      )}
+      ;
+    </>
   );
 };
 

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import GamesContext from "./../elements/GamesContext";
+import GamesContext from "../elements/GamesContext";
 import { useHistory } from "react-router-dom";
 
 const Logout = () => {
   let { setLoggedIn } = useContext(GamesContext);
   const history = useHistory();
 
-  function handleLogout() {
+  async function handleLogout() {
     setLoggedIn(false);
     localStorage.removeItem("token");
     history.push("/login");

@@ -37,7 +37,7 @@ const CartClientFields = () => {
       sendNotification("YOUR CART IS EMPTY :C");
     } else {
       sendNotification("YOUR ORDER IS ACCEPTED C:");
-      await API.post("/customers", newCustoumer);
+      await API.post("/customers", newCustoumer).then(setValues({ email: "", firstName: "", secondName: "", phoneNumber: "", adress: "", postalCode: "" }));
     }
   }
 

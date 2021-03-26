@@ -14,30 +14,11 @@ import Login from "./login/Login";
 import useToken from "./login/useToken";
 import ProfilePage from "./login/ProfilePage";
 import useUser from "./login/useUser";
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "clear":
-      return [];
-    case "add":
-      return [...state, action.item];
-    case "increase":
-      action.item.quantity++;
-      return [...state];
-    case "decrease":
-      if (action.item.quantity > 0) {
-        action.item.quantity--;
-      }
-
-      return [...state];
-    default:
-      console.log(`Type: ${action.type} is incorrect`);
-  }
-}
+import cartReducer from "./reducers/CartReducer";
 
 const App = () => {
   const [products, setProducts] = useState([]);
-  const [cart, updateCart] = useReducer(reducer, []);
+  const [cart, updateCart] = useReducer(cartReducer, []);
   const [filter, setFilter] = useState("");
   const [loading, setLoading] = useState(false);
   const [loggedIn, setLoggedIn] = useState(Boolean(localStorage.getItem("token"))); //convert value to boolean

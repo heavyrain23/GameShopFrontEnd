@@ -94,18 +94,45 @@ export const StyledCart = styled.div`
   }
 
   .orders-quantity {
-    min-width: 100px;
+    max-width: 160px;
     position: absolute;
     bottom: 0;
     right: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
   }
 
-  .orders-quantity button {
-    background: rgb(122 111 119);
-    padding: 0 7px;
+  .changeButtons {
+    margin-right: 20px;
+  }
+
+  .deleteButton {
+    border: 1px solid #a79d9d;
+    padding: 3px 9px;
     margin: 5px;
-    border-radius: 5px;
-    color: white;
+    border-radius: 15px;
+    color: #a79d9d;
+    font-weight: 200;
+    font-size: 15px;
+  }
+
+  .increaseButton,
+  .decreaseButton {
+    border: 1px solid rgb(192, 25, 150);
+    padding: 3px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    color: rgb(192, 25, 150);
+    font-weight: 200;
+    font-size: 15px;
+  }
+
+  .increaseButton:hover,
+  .decreaseButton:hover,
+  .deleteButton:hover {
+    color: #a79d9d;
+    background: rgb(192, 25, 150);
   }
 
   .remove-button {
@@ -137,6 +164,19 @@ export const StyledCart = styled.div`
 
     .orders-quantity {
       font-size: 15px;
+      padding: 0;
+    }
+
+    .changeButtons {
+      margin-right: 0;
+    }
+
+    .increaseButton,
+    .decreaseButton,
+    .deleteButton {
+      padding: 5px;
+      margin: 3px;
+      font-size: 10px;
     }
 
     .orders-image {

@@ -6,7 +6,6 @@ import GamesContext from "./GamesContext";
 const Game = () => {
   const { id } = useParams();
   const { products, cart, updateCart } = useContext(GamesContext);
-  console.log({ products });
   const product = products && products[id - 1];
 
   const addGame = () => {
@@ -30,7 +29,7 @@ const Game = () => {
           <StyledGameTitle>{product.title}</StyledGameTitle>
           <StyledGame>
             <div className="image_item">
-              <img src={"/images/" + product.image_name} alt="" width="350px" />
+              <img className="game_image" src={"/images/" + product.image_name} alt="" />
             </div>
             <div className="info_item">
               <div className="item_desc">{product.description}</div>

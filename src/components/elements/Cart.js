@@ -33,9 +33,18 @@ const Cart = () => {
                 <div className="product-price">{product.price}$</div>
               </div>
               <div className="orders-quantity">
-                <button onClick={() => updateCart({ type: "increase", item: product })}>+</button>
-                <button onClick={() => updateCart({ type: "decrease", item: product })}>-</button>
-                <div>quantity :{product.quantity}</div>
+                <div className="changeButtons">
+                  <button className="increaseButton" onClick={() => updateCart({ type: "increase", item: product })}>
+                    +
+                  </button>
+                  {product.quantity}
+                  <button className="decreaseButton" onClick={() => updateCart({ type: "decrease", item: product })}>
+                    -
+                  </button>
+                </div>
+                <button className="deleteButton" onClick={() => updateCart({ type: "delete", item: product })}>
+                  X
+                </button>
               </div>
             </div>
           ))}

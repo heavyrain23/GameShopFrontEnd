@@ -25,6 +25,10 @@ export const StyledGame = styled.div`
     width: 40%;
   }
 
+  .game_image {
+    max-width: 400px;
+  }
+
   .item_desc {
     margin-top: 30px;
     font-size: 15px;
@@ -82,18 +86,28 @@ export const StyledGame = styled.div`
       }
   }
 
-  @media (max-width: 620px) {
+  @media (max-width: 670px) {
     .image_item img {
-      width: 80%;
-        
+      width: 80%;        
     }
+    .game_button {
+      padding: 10px;
+      justify-content: space-around;
+      
+
+      .game_button_text {
+        font-size: 15px;
+      }
+    }
+    
   }
 `;
 
 export const StyledGameTitle = styled.div`
   position: relative;
+  left: 40px;
   color: #56514a;
-  left: 85px;
+  left: 110px;
   width: 500px;
   padding: 10px 10%;
   font-size: 35px;
@@ -101,5 +115,15 @@ export const StyledGameTitle = styled.div`
 
   @media (max-width: 1275px) {
     margin: 0 auto;
+  }
+
+  @media (max-width: 900px) {
+    position: inherit;
+    font-size: 25px;
+    width: 300px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px;
   }
 `;

@@ -10,10 +10,10 @@ export const StyledHome = styled.div`
 
   .game-item {
     position: relative;
-    margin-left: 12px;
-    margin-bottom: 12px;
+    margin-left: 5px;
+    margin-bottom: 5px;
     width: 330px;
-    height: 550px;
+    height: 520px;
     padding: 30px 20px;
     border-radius: 5px;
     text-align: center;
@@ -30,8 +30,8 @@ export const StyledHome = styled.div`
   }
 
   .item-title {
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 23px;
+    font-weight: 400;
     color: #636565;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -39,31 +39,33 @@ export const StyledHome = styled.div`
 
   .item-genre {
     position: absolute;
-    font-size: 25px;
+    font-size: 20px;
     color: rgb(192,25,150);
-    font-weight: bolder;
+    font-weight: 500;
     margin-top: 10px;
     bottom: 80px;
     left: 0;
     right: 0;
   }
 
+  .item-image {
+    width: 250px;
+    border-radius: 20px;
+  }
+
   .item-price {
     position: absolute;
     bottom: 25px;
-    left: 5px;
+    left: 0px;
     font-size: 20px;
     margin-top: 20px;
-    background-color: #c6c7c7e8;
+    background-color: rgb(176 39 156 / 86%);
     color: white;
     font-weight: 100;
-    padding: 5px 158px;
+    padding: 7px 163px;
     transition: 0.5s;
   }
 
-  .item-price:hover {
-    background-color: rgb(192, 25, 150);
-  }
 
   @media (max-width: 782px) {
     justify-content:center;

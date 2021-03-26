@@ -15,28 +15,29 @@ const Header = () => {
         <NavLink className="nav-link" exact to={"/"}>
           <div className="header-logo"> Game Store</div>
         </NavLink>
-        <StyledInput>
-          <input value={filter} onChange={(event) => setFilter(event.target.value)} placeholder="Search..." />
-        </StyledInput>
 
         {loggedIn && (
-          <NavLink className="nav-link" exact to={"/profilePage"}>
+          <NavLink className="profilePageLink" exact to={"/profilePage"}>
             <div> Profile page</div>
           </NavLink>
         )}
 
-        {!loggedIn ? (
-          <NavLink className="nav-link" exact to={"/login"}>
-            <button>Login</button>
-          </NavLink>
-        ) : (
-          <Logout />
-        )}
+        <StyledInput>
+          <input value={filter} onChange={(event) => setFilter(event.target.value)} placeholder="Search..." />
+        </StyledInput>
 
         <NavLink exact to={"/cart"}>
           {cart.length > 0 && <MiniCartCurcle />}
           <MiniCart />
         </NavLink>
+
+        {!loggedIn ? (
+          <NavLink className="nav-link" exact to={"/login"}>
+            <button className="login_button">Login</button>
+          </NavLink>
+        ) : (
+          <Logout />
+        )}
       </div>
     </StyledHeader>
   );

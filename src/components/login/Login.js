@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import GamesContext from "../elements/GamesContext";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { StyledLogin } from "./../styles/StyledLogin";
 
 //config for axios
 let config = {
@@ -34,22 +35,24 @@ const Login = ({ setToken, setUser }) => {
   };
 
   return (
-    <div className="login-wrapper">
-      <h1>Please Log In</h1>
+    <StyledLogin>
       <form onSubmit={handleSubmit}>
+        <div className="login_title">Please Log In :)</div>
         <label>
-          <p>Username</p>
+          <p className="loginInfo">Username</p>
           <input type="text" onChange={(e) => setUserName(e.target.value)} />
         </label>
         <label>
-          <p>Password</p>
+          <p className="loginInfo">Password</p>
           <input type="password" autoComplete="on" onChange={(e) => setPassword(e.target.value)} />
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <button className="submitButton" type="submit">
+            Submit
+          </button>
         </div>
       </form>
-    </div>
+    </StyledLogin>
   );
 };
 

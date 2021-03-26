@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import GamesContext from "../elements/GamesContext";
 import { useHistory } from "react-router-dom";
+import { StyledLogout } from "./../styles/StyledLogout";
 
 const Logout = () => {
   let { setLoggedIn } = useContext(GamesContext);
@@ -14,9 +15,11 @@ const Logout = () => {
   }
 
   return (
-    <div>
-      <button onClick={handleLogout}>Log Out</button>
-    </div>
+    <StyledLogout>
+      <button className="buttonLogout" onClick={handleLogout}>
+        Log Out
+      </button>
+    </StyledLogout>
   );
 };
 

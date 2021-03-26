@@ -30,7 +30,7 @@ const Game = () => {
           <StyledGameTitle>{product.title}</StyledGameTitle>
           <StyledGame>
             <div className="image_item">
-              <img src={"/images/" + product.image_name} alt="" width="400px" />
+              <img src={"/images/" + product.image_name} alt="" width="350px" />
             </div>
             <div className="info_item">
               <div className="item_desc">{product.description}</div>

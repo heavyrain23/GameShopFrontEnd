@@ -7,6 +7,33 @@ export const StyledHome = styled.div`
   max-width: 1160px;
   margin: 0 auto;
   padding: 15px 10px 5px 5px;
+  
+  .image_wrapper {
+    position: relative;
+  }
+
+  .main_image {
+    max-width:100%;
+    border-radius: 10px;
+    height: auto;
+    margin: 5px 5px;
+    margin-bottom: 20px;
+    width: 1120px;
+   
+  }
+  
+  .title_text{ 
+    max-width:900px;
+    position: absolute;
+    bottom: 140px;
+    left: 15%;
+    color: #f829fb9e;
+    
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: fantasy;
+    
+  }
 
   .game-item {
     position: relative;

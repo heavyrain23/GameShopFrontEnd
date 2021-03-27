@@ -9,6 +9,10 @@ const AllGames = () => {
   return (
     <div>
       <StyledHome>
+        <div className="image_wrapper">
+          <img className="main_image" src="/images/wallpaper.jpg" alt="" />
+          <div className="title_text">Explore our game shop and have a best game experience!</div>
+        </div>
         {products &&
           products.map((product) => (
             <NavLink className="nav-link" key={product.id} to={"/game/" + product.id}>

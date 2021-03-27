@@ -32,9 +32,15 @@ const Header = () => {
         </NavLink>
 
         {!loggedIn ? (
-          <NavLink className="nav-link" exact to={"/login"}>
-            <button className="login_button">Login</button>
-          </NavLink>
+          <div className="login_wrapper">
+            <NavLink className="nav-link" exact to={"/login"}>
+              <div className="login_button">Login</div>
+            </NavLink>
+            <div>|</div>
+            <NavLink className="nav-link" exact to={"/sign_up"}>
+              <div className="signUp_button"> Sign up</div>
+            </NavLink>
+          </div>
         ) : (
           <Logout />
         )}

@@ -48,7 +48,7 @@ const Login = ({ setToken, setUser }) => {
         </label>
         <div>
           <button className="submitButton" type="submit">
-            Submit
+            Login
           </button>
         </div>
       </form>

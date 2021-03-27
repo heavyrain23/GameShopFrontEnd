@@ -5,8 +5,6 @@ import { StyledProfilePage } from "../styles/StyledProfilePage";
 const ProfilePage = () => {
   let { user } = useContext(GamesContext);
 
-  console.log(user);
-
   return (
     <>
       {user && (

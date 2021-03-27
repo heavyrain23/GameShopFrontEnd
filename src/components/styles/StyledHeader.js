@@ -19,25 +19,27 @@ export const StyledHeader = styled.div`
       min-height: 0px;
     }
 
+    .login_wrapper {
+      display: flex;
+      color: rgb(192, 25, 150);
+      font-size: 20px;
+    }
+
     .nav-link {
       text-decoration: none;
       color: white;
-      font-weight: bold;
       font-size: 30px;
 
-      .login_button {
+      .login_button,
+      .signUp_button {
         cursor: pointer;
-        display: flex;
-        background-color: rgb(192, 25, 150);
-        color: whitesmoke;
-        padding: 5px 17px;
-        border-radius: 5px;
-        font-weight: bolder;
+        font-size: 20px;
+        color: rgb(192, 25, 150);
       }
 
-      .login_button:hover {
-        background: rgb(229 228 228);
-        color: rgb(54, 53, 53);
+      .login_button:hover,
+      .signUp_button:hover {
+        color: white;
       }
     }
 

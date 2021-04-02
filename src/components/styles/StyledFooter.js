@@ -2,12 +2,18 @@ import styled from "styled-components";
 
 export const StyledFooter = styled.div`
   position: relative;
-  text-align: center;
-  color: white;
-  width: 100%;
-  top: 15vh;
-  font-size: 15px;
-  background: rgb(54, 53, 53);
-  padding: 40px 30px;
-  box-sizing: border-box;
+  min-height: 20vh;
+  padding-bottom: 5.5rem;
+
+  .text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    color: white;
+    font-size: 15px;
+    background: rgb(54, 53, 53);
+    box-sizing: border-box;
+  }
 `;

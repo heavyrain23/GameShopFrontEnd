@@ -15,6 +15,7 @@ import useToken from "./login/useToken";
 import ProfilePage from "./login/ProfilePage";
 import useUser from "./login/useUser";
 import cartReducer from "./reducers/CartReducer";
+import SingUp from "./login/SignUp";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -48,6 +49,7 @@ const App = () => {
         <ListGames />
         <Route exact path="/" children={<AllGames />} />
         <Route exact path="/login" children={<Login setToken={setToken} setUser={setUser} />} />
+        <Route exact path="/sign-up" children={<SingUp />} />
         <Route exact path="/profilePage" children={<ProfilePage />} />
         <Route exact path="/game/:id" children={<Game />} />
         <Route exact path="/cart" children={<Cart />} />

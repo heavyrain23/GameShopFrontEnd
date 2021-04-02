@@ -37,7 +37,7 @@ const Header = () => {
               <div className="login_button">Login</div>
             </NavLink>
             <div>|</div>
-            <NavLink className="nav-link" exact to={"/sign_up"}>
+            <NavLink className="nav-link" exact to={"/sign-up"}>
               <div className="signUp_button"> Sign up</div>
             </NavLink>
           </div>

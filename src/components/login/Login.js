@@ -18,8 +18,6 @@ const Login = ({ setToken, setUser }) => {
 
   const { setLoggedIn } = useContext(GamesContext);
 
-  console.log(setToken);
-  console.log(setUser);
   const handleSubmit = async (e) => {
     e.preventDefault();
 

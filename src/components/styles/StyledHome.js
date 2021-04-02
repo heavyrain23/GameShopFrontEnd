@@ -13,11 +13,10 @@ export const StyledHome = styled.div`
   }
 
   .main_image {
-    max-width:100%;
     border-radius: 10px;
     height: auto;
     margin: 5px 5px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 1120px;
    
   }
@@ -38,6 +37,8 @@ export const StyledHome = styled.div`
   .game-item {
     position: relative;
     margin-left: 5px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 5px;
     width: 330px;
     height: 520px;
@@ -57,11 +58,13 @@ export const StyledHome = styled.div`
   }
 
   .item-title {
+    position: absolute;
+    bottom: 120px;
     font-size: 23px;
     font-weight: 400;
     color: #636565;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 0 10px;
+    font-weight: 600;
   }
 
   .item-genre {
@@ -76,7 +79,7 @@ export const StyledHome = styled.div`
   }
 
   .item-image {
-    width: 250px;
+    max-height: 65%;
     border-radius: 20px;
   }
 
@@ -89,7 +92,8 @@ export const StyledHome = styled.div`
     background-color: rgb(176 39 156 / 86%);
     color: white;
     font-weight: 100;
-    padding: 7px 163px;
+    width: 370px;
+    padding: 5px 0px;
     transition: 0.5s;
   }
 

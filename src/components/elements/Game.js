@@ -1,12 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { StyledGame, StyledGameTitle } from "./../styles/StyledGame";
 import GamesContext from "./GamesContext";
+import GameNotification from "./GameNotification";
 
 const Game = () => {
   const { id } = useParams();
   const { products, cart, updateCart } = useContext(GamesContext);
   const product = products && products[id - 1];
+  const [notification, setNotification] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setNotification("");
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [notification]);
 
   const addGame = () => {
     // checking for existing obj in array
@@ -20,12 +29,14 @@ const Game = () => {
       product.quantity = 1;
       updateCart({ type: "add", item: product });
     }
+    setNotification(`${product.title}`);
   };
 
   return (
     <>
       {product && (
         <div>
+          <GameNotification text={notification} />
           <StyledGameTitle>{product.title}</StyledGameTitle>
           <StyledGame>
             <div className="image_item">
@@ -35,7 +46,7 @@ const Game = () => {
               <div className="item_desc">{product.description}</div>
               <div onClick={() => addGame()} className="game_button">
                 <div className="game_button_text">Buy now</div>
-                <div className="game_button_text">{product.price} $</div>
+                <div className="game_button_text">{product.price}$</div>
               </div>
             </div>
           </StyledGame>
